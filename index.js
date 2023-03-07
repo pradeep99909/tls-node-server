@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get(["/", "/:name"], (req, res) => {
+app.post(["/", "/:name"], (req, res) => {
   greeting = "<h1>Hello From Node on Fly!</h1>";
   const name = req.params["name"];
   const data = req.body;
