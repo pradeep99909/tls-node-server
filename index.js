@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.post(["/", "/:name"], (req, res) => {
+  res.header('Access-Control-Allow-Origin', "*");
   greeting = "<h1>Hello From Node on Fly!</h1>";
   const name = req.params["name"];
   const data = req.body;
