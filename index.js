@@ -19,7 +19,7 @@ app.post("/data", (req, res) => {
   greeting = "<h1>Hello From Node on Fly!</h1>";
   const data = req.body;
   console.log("/ data ::",data)
-  res.send(data)
+  res.status(200).send(data)
 });
 
 app.listen(port, () => console.log(`HelloNode app listening on port ${port}!`));
